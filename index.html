@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .item {
+        border: solid 2px red;
+        background-color: black;
+        width: 100px;
+        height: 100px;
+      }
+      .block {
+        border: solid 2px red;
+        background-color: black;
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+    <script>
+      let i = 0;
+      function onClick() {
+        if (i === 0) {
+          const divList = document.getElementsByClassName("item");
+          for (const div of divList) {
+            div.style.width = "100px";
+            div.style.height = "100px";
+            div.style.backgroundColor = "white";
+          }
+          i++;
+          return;
+        }
+        if (i === 1) {
+          const divList = document.getElementsByClassName("item");
+          for (const div of divList) {
+            div.style.width = "100px";
+            div.style.height = "100px";
+            div.style.backgroundColor = "black";
+          }
+          i--;
+        }
+      }
+      let a = 0;
+      function changeColor() {
+        if (a === 0) {
+          console.log(a);
+          const together = document.getElementsByClassName("block");
+          for (const div of together) {
+            div.style.width = "100px";
+            div.style.height = "100px";
+            div.style.backgroundColor = "white";
+          }
+          a++;
+          return;
+        }
+        if (a === 1) {
+          const divList = document.getElementsByClassName("block");
+          for (const div of divList) {
+            div.style.width = "100px";
+            div.style.height = "100px";
+            div.style.backgroundColor = "black";
+          }
+          a--;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="item" onclick="onClick()"></div>
+    <div class="block" onclick="changeColor()"></div>
+  </body>
+</html>
